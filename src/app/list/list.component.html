@@ -1,0 +1,27 @@
+<div class="container p-2">
+
+        <table class="table table-stripped" aria-labelledby="details">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let val of data">
+                    <td>{{val.id}}</td>
+                    <td>{{val.name}}</td>
+                    <td><button class="btn btn-success"(click)="forward(val)">Details</button></td>
+                </tr>
+            </tbody>
+        </table>
+  
+    <div class="container">
+        <div *ngIf="p==1">
+            <app-details [p]="object"></app-details>
+        </div>
+    </div>
+   
+</div>
+
